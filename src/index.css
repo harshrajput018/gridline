@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+:root {
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --surface-2: #f3f4f6;
+  --hover: #eef2ff;
+  --line: #e5e7eb;
+  --fg: #111827;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-soft: #e0e7ff;
+  --accent-soft-solid: #e0e7ff;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d12;
+    --surface: #0f1218;
+    --surface-2: #151922;
+    --hover: #1a1f2e;
+    --line: #232937;
+    --fg: #e6e8ee;
+    --muted: #8b93a7;
+    --accent: #818cf8;
+    --accent-soft: rgb(129 140 248 / 0.16);
+    --accent-soft-solid: #1e2240;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-hover: var(--hover);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-soft-solid: var(--accent-soft-solid);
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
